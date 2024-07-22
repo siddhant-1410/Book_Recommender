@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgb(15, 14, 14);
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background: url();
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgb(139, 0, 0);
+    background: rgb(15, 14, 14);
+    position:relative;
+    top:0;
+    left: 0;
+    left: 0;
+    z-index: 100;
+    /* padding: 10px 0; */
+}
+
+section nav .logo img {
+    width: 75px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+section nav li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    list-style: none;
+}
+
+section nav li a:hover {
+    color: rgb(139, 0, 0);
+}
+
+.social-icons i {
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: rgb(139, 0, 0);
+    transform: scale(1.1);
+}
+
+/* Main */
+section .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 10%;
+}
+
+section .main h1 {
+    position: relative;
+    font-size: 55px;
+    top: 80px;
+    left: 25px;
+}
+
+section .main h1 span {
+    color: rgb(139, 0, 0);
+}
+
+section .main p {
+    width: 650px;
+    text-align: justify;
+    line-height: 22px;
+    position: relative;
+    top: 125px;
+    left: 25px;
+}
+
+section .main .main-tag .main-btn {
+    background: rgb(139, 0, 0);
+    padding: 10px 20px;
+    position: relative;
+    top: 200px;
+    left: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+section .main-img {
+    width: 780px;
+    position: relative;
+    top: 90px;
+    left: 20px;
+}
+
+/* Services */
+.services {
+    width: 100%;
+    height: auto;
+    margin: 35px 0;
+}
+
+.services .services-box {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services .services-box .services-card {
+    text-align: center;
+    width: 310px;
+    height: auto;
+    box-shadow: 0 0 8px rgb(139, 0, 0);
+    padding: 15px 10px;
+    background-color: #222020;
+    border-radius: 10px;
+}
+.services .services-box .services-card:hover{
+    transform: scale(1.1);
+}
+.services .services-box .services-card i {
+    color: #089da1;
+    font-size: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #222020;
+}
+
+.services .services-box .services-card h3 {
+    margin-bottom: 10px;
+    background-color: #222020;
+}
+.services .services-box .services-card p{
+    background-color: #222020;
+}
+
+/* About */
+.about {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-image img {
+    width: 800px;
+}
+
+.about .about-tag p {
+    line-height: 22px;
+    width: 650px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.about .about-tag .about-btn {
+    padding: 10px 20px;
+    background-color: rgb(139, 0, 0);
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 50px;
+}
+
+/* Featured Books */
+.featured-book {
+    width: 100%;
+    padding: 70px 0;
+    overflow: hidden; /* Hide vertical scrollbar if any */
+}
+
+.featured-book h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+.featured-book .featured-book-box {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.featured-book .featured-book-box::-webkit-scrollbar {
+    height: 10px;
+}
+
+.featured-book .featured-book-box::-webkit-scrollbar-thumb {
+    background-color: rgb(139, 0, 0);
+    border-radius: 10px;
+}
+
+.featured-book .featured-book-box .featured-book-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 420px;
+    text-align: center;
+    gap: 15px;
+    padding: 5px;
+    border: 1px solid #919191;
+    margin: 0 10px; /* Reduced margin to fit better */
+    scroll-snap-align: center;
+    overflow: hidden; /* Hide overflow inside the card */
+    border-radius: 15px;
+    
+}
+
+.featured-book .featured-book-box .featured-book-card:hover {
+    box-shadow: 0 0 15px rgb(139, 0, 0);
+    transform: scale(0.9);
+}
+
+.featured-book .featured-book-box .featured-book-card .featured-book-img img {
+    width: 150px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+    padding-top: 10px; /* Ensure images fit nicely */
+}
+
+.featured-book .featured-book-box .featured-book-card .featured-book-tag {
+    padding: 10px;
+}
+
+.featured-book .featured-book-box .featured-book-card .featured-book-tag h2 {
+    margin: 12px;
+    font-size: 16px; /* Adjust font size to fit */
+    white-space: nowrap; /* Prevent text from breaking */
+    overflow: hidden; /* Hide text overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.featured-book .featured-book-box .featured-book-card .featured-book-tag .writer {
+    color: #919191;
+}
+
+.featured-book .featured-book-box .featured-book-card .featured-book-tag .categories {
+    color: rgb(139, 0, 0);
+    margin-top: 8px;
+}
+
+.featured-book .featured-book-box .featured-book-card .featured-book-tag .book-price {
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.featured-book .featured-book-box .featured-book-card .featured-book-tag a {
+    padding: 8px 20px;
+    border: 2px solid rgb(139, 0, 0);
+    border-radius: 7px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.featured-book .featured-book-box .featured-book-card .featured-book-tag a:hover{
+    background-color: darkred;
+}
+
+/* ---fonts */
+
+
+.outfit-SemiBold600 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.archivo-heading {
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500    ;
+    font-style: normal;
+    /* font-variation-settings:
+      "wdth" 100; */
+  }
+
+  .ibm-plex-serif-thin {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .ibm-plex-serif-extralight {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .ibm-plex-serif-light {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ibm-plex-serif-regular {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ibm-plex-serif-medium {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ibm-plex-serif-semibold {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .ibm-plex-serif-bold {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ibm-plex-serif-thin-italic {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .ibm-plex-serif-extralight-italic {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .ibm-plex-serif-light-italic {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .ibm-plex-serif-regular-italic {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ibm-plex-serif-medium-italic {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .ibm-plex-serif-semibold-italic {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .ibm-plex-serif-bold-italic {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .be-vietnam-pro-thin {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .be-vietnam-pro-extralight {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .be-vietnam-pro-light {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .be-vietnam-pro-regular {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .be-vietnam-pro-medium {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .be-vietnam-pro-semibold {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .be-vietnam-pro-bold {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .be-vietnam-pro-extrabold {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .be-vietnam-pro-black {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .be-vietnam-pro-thin-italic {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .be-vietnam-pro-extralight-italic {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .be-vietnam-pro-light-italic {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .be-vietnam-pro-regular-italic {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .be-vietnam-pro-medium-italic {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .be-vietnam-pro-semibold-italic {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .be-vietnam-pro-bold-italic {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .be-vietnam-pro-extrabold-italic {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .be-vietnam-pro-black-italic {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  

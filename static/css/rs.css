@@ -1,0 +1,353 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif; /* Adjust as needed */
+    background-color: rgb(15, 14, 14);
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgb(139, 0, 0);
+    background: rgb(15, 14, 14); /* Matches background color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+nav .logo img {
+    width: 70px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 0 10px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255); /* White color */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: rgb(139, 0, 0); /* Highlight color */
+}
+
+.social-icons i {
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: rgb(139, 0, 0);
+    transform: scale(1.1);
+}
+
+/* Recommendation Section */
+.recommendation {
+    width: 100%;
+    padding: 120px 0 20px;
+    background-color: rgb(15, 14, 14); /* Matches background color */
+    text-align: center;
+}
+
+.recommendation h1 {
+    font-size: 49px;
+    margin-bottom: 25px;
+    color: rgb(255, 255, 255); /* White color for text */
+}
+
+.recommendation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.recommendation-form .form-control {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.recommendation-form .btn-submit {
+    background-color: rgb(139, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.recommendation-form .btn-submit:hover {
+    background-color: rgb(139, 0, 0);
+}
+
+/* Recommendation Results */
+.recommendation-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    
+}
+
+.recommendcard {
+    background-color: #131212;
+    /* border: 1px solid #930000; */
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(139, 0, 0);
+}
+.recommendcardbody img {
+    width: 150px;
+    height: 230px;
+    object-fit:fill;
+    /* padding-top: 5px; */
+}
+
+.recommendbookname {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.recommendcard:hover{
+    transform: scale(1.1);
+}
+.recommendauthorname {
+    color: #ffffff;
+
+}
+
+/* ---fonts */
+
+
+.outfit-SemiBold600 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .archivo-heading {
+      font-family: "Archivo", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500    ;
+      font-style: normal;
+      /* font-variation-settings:
+        "wdth" 100; */
+    }
+  
+    .ibm-plex-serif-thin {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 100;
+      font-style: normal;
+    }
+    
+    .ibm-plex-serif-extralight {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    .ibm-plex-serif-light {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    .ibm-plex-serif-regular {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .ibm-plex-serif-medium {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    .ibm-plex-serif-semibold {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+    
+    .ibm-plex-serif-bold {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    .ibm-plex-serif-thin-italic {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 100;
+      font-style: italic;
+    }
+    
+    .ibm-plex-serif-extralight-italic {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 200;
+      font-style: italic;
+    }
+    
+    .ibm-plex-serif-light-italic {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 300;
+      font-style: italic;
+    }
+    
+    .ibm-plex-serif-regular-italic {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    .ibm-plex-serif-medium-italic {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+    
+    .ibm-plex-serif-semibold-italic {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 600;
+      font-style: italic;
+    }
+    
+    .ibm-plex-serif-bold-italic {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 700;
+      font-style: italic;
+    }
+    
+    .be-vietnam-pro-thin {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+    }
+    
+    .be-vietnam-pro-extralight {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    .be-vietnam-pro-light {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    .be-vietnam-pro-regular {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .be-vietnam-pro-medium {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    .be-vietnam-pro-semibold {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+    
+    .be-vietnam-pro-bold {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    .be-vietnam-pro-extrabold {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+    }
+    
+    .be-vietnam-pro-black {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+    
+    .be-vietnam-pro-thin-italic {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 100;
+      font-style: italic;
+    }
+    
+    .be-vietnam-pro-extralight-italic {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 200;
+      font-style: italic;
+    }
+    
+    .be-vietnam-pro-light-italic {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 300;
+      font-style: italic;
+    }
+    
+    .be-vietnam-pro-regular-italic {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    .be-vietnam-pro-medium-italic {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+    
+    .be-vietnam-pro-semibold-italic {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 600;
+      font-style: italic;
+    }
+    
+    .be-vietnam-pro-bold-italic {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 700;
+      font-style: italic;
+    }
+    
+    .be-vietnam-pro-extrabold-italic {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 800;
+      font-style: italic;
+    }
+    
+    .be-vietnam-pro-black-italic {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 900;
+      font-style: italic;
+    }
+    
