@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Be Vietnam Pro', sans-serif; /* Adjust as needed */
+    font-family: 'Be Vietnam Pro', sans-serif;
     background-color: rgb(15, 14, 14);
 }
 
@@ -14,7 +14,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     box-shadow: 0 0 10px rgb(139, 0, 0);
-    background: rgb(15, 14, 14); /* Matches background color */
+    background: rgb(15, 14, 14); 
     position: fixed;
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(255, 255, 255); /* White color */
+    color: rgb(255, 255, 255); 
     text-decoration: none;
 }
 
@@ -61,14 +61,14 @@ nav ul li a:hover {
 .recommendation {
     width: 100%;
     padding: 120px 0 20px;
-    background-color: rgb(15, 14, 14); /* Matches background color */
+    background-color: rgb(15, 14, 14); 
     text-align: center;
 }
 
 .recommendation h1 {
     font-size: 49px;
     margin-bottom: 25px;
-    color: rgb(255, 255, 255); /* White color for text */
+    color: rgb(255, 255, 255); 
 }
 
 .recommendation-form {

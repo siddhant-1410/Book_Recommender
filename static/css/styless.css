@@ -186,7 +186,7 @@ section .main-img {
 .featured-book {
     width: 100%;
     padding: 70px 0;
-    overflow: hidden; /* Hide vertical scrollbar if any */
+    overflow: hidden; 
 }
 
 .featured-book h1 {
@@ -202,7 +202,7 @@ section .main-img {
     margin: 0 auto;
     display: flex;
     overflow-x: auto;
-    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-y: hidden; 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth; /* Smooth scrolling */
 }
@@ -224,9 +224,9 @@ section .main-img {
     gap: 15px;
     padding: 5px;
     border: 1px solid #919191;
-    margin: 0 10px; /* Reduced margin to fit better */
+    margin: 0 10px; 
     scroll-snap-align: center;
-    overflow: hidden; /* Hide overflow inside the card */
+    overflow: hidden; 
     border-radius: 15px;
     
 }
@@ -241,7 +241,7 @@ section .main-img {
     height: 230px;
     object-fit: cover;
     border-radius: 15px;
-    padding-top: 10px; /* Ensure images fit nicely */
+    padding-top: 10px; 
 }
 
 .featured-book .featured-book-box .featured-book-card .featured-book-tag {
@@ -250,10 +250,10 @@ section .main-img {
 
 .featured-book .featured-book-box .featured-book-card .featured-book-tag h2 {
     margin: 12px;
-    font-size: 16px; /* Adjust font size to fit */
-    white-space: nowrap; /* Prevent text from breaking */
-    overflow: hidden; /* Hide text overflow */
-    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    font-size: 16px; 
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
 .featured-book .featured-book-box .featured-book-card .featured-book-tag .writer {
