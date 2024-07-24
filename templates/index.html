@@ -1,110 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Recommender System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styless.css') }}">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <section>
-        <nav>
-            <div class="logo">
-                <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="Logo">
-            </div>
-            <ul>
-                <li><a href="/" class="be-vietnam-pro-regular">Home</a></li>
-                <li><a href="#" class="be-vietnam-pro-regular" >About</a></li>
-                <li><a href="#" class="be-vietnam-pro-regular" >Featured</a></li>
-                <li><a href="#" class="be-vietnam-pro-regular" >Blog</a></li>
-                <li><a href="/recommend" class="be-vietnam-pro-regular" >Recommend</a></li>
-                <li><a href="#" class="be-vietnam-pro-regular" >Contact Us</a></li>
-            </ul>
-            <div class="social-icons">
-                <i class='bx bx-search-alt-2' style="color: whitesmoke;"></i>
-                <i class='bx bxs-heart' style="color: whitesmoke;"></i>
-            </div>
-        </nav>
-
-        <div class="main">
-            <div class="main-tag">
-                <h1 class="archivo-heading" style="color: white;">WELCOME TO <br><span class="outfit-SemiBold600" style="color: darkred;">BOOK STORE</span></h1>
-                <p class="ibm-plex-serif-medium" style="color: white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas natus ipsam numquam dolorum aut sapiente enim, aliquid molestias laudantium. Sit facilis quos deserunt animi! Sunt, id nihil! Ipsum, facilis minus.</p>
-                <a href="/recommend" class="main-btn be-vietnam-pro-regular">Get Recommendations</a>
-            </div>
-            <div class="main-img">
-                <img src="{{ url_for('static', filename='images/table.png') }}" alt="">
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <div class="services">
-        <div class="services-box">
-            <div class="services-card">
-                <i class='bx bxs-card' style="color: whitesmoke;"></i>
-                <h3 class="be-vietnam-pro-bold" style="color: darkred;">Fast Delivery</h3>
-                <p class="ibm-plex-serif-medium" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum vel possimus voluptates animi, architecto quidem dolor, dolores maiores minus placeat ipsa. Voluptate mollitia omnis amet pariatur maiores architecto minima dolores!</p>
-            </div>
-
-            <div class="services-card">
-                <i class='bx bx-headphone' style="color: whitesmoke;"></i>
-                <h3 class="be-vietnam-pro-bold" style="color: darkred;">24 x 7 Delivery</h3>
-                <p class="ibm-plex-serif-medium" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum vel possimus voluptates animi, architecto quidem dolor, dolores maiores minus placeat ipsa. Voluptate mollitia omnis amet pariatur maiores architecto minima dolores!</p>
-            </div>
-
-            <div class="services-card">
-                <i class='bx bxs-purchase-tag-alt' style="color: whitesmoke;"></i>
-                <h3 class="be-vietnam-pro-bold" style="color: darkred;">Purchase</h3>
-                <p class="ibm-plex-serif-medium"style="color: white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum vel possimus voluptates animi, architecto quidem dolor, dolores maiores minus placeat ipsa. Voluptate mollitia omnis amet pariatur maiores architecto minima dolores!</p>
-            </div>
-
-            <div class="services-card">
-                <i class='bx bxs-lock' style="color: whitesmoke;"></i>
-                <h3 class="be-vietnam-pro-bold" style="color: darkred;">Lock</h3>
-                <p class="ibm-plex-serif-medium" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum vel possimus voluptates animi, architecto quidem dolor, dolores maiores minus placeat ipsa. Voluptate mollitia omnis amet pariatur maiores architecto minima dolores!</p>
-            </div>
-        </div>
-    </div>
-
-   
-
-    <!-- FEATURED BOOKS -->
-    <div class="featured-book">
-        <h1 class="outfit-SemiBold600" style="color: darkred;">TOP 50 FEATURED BOOKS</h1>
-        <div class="featured-book-box">
-            {% for i in range(book_name|length) %}
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="{{ image[i] }}" alt="">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Recommender System</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styless.css') }}">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+            <nav>
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="Logo">
                 </div>
-                <div class="featured-book-tag">
-                    <h2 class="writer">{{ book_name[i] }}</h2>
-                    <h2 class="writer">{{ author[i] }}</h2>
-                    <p class="categories be-vietnam-pro-regular">Votes - {{ votes[i] }}</p>
-                    <p class="book-price" style="color: white;">{{ rating[i] }}</p>
-                    <a href="#" class="be-vietnam-pro-regular" style="color: white;">Read More</a>
+                <ul>
+                    <li><a href="/" class="be-vietnam-pro-regular">Home</a></li>
+                    <!-- <li><a href="#" class="be-vietnam-pro-regular" >About</a></li> -->
+                    <li><a href="#" class="be-vietnam-pro-regular" >Featured</a></li>
+                    <!-- <li><a href="#" class="be-vietnam-pro-regular" >Blog</a></li> -->
+                    <li><a href="/recommend" class="be-vietnam-pro-regular" >Recommend</a></li>
+                    <!-- <li><a href="#" class="be-vietnam-pro-regular" >Contact Us</a></li> -->
+                </ul>
+                <div class="social-icons">
+                    <i class='bx bx-search-alt-2' style="color: whitesmoke;"></i>
+                    <i class='bx bxs-heart' style="color: whitesmoke;"></i>
+                </div>
+            </nav>
+
+            <div class="main">
+                <div class="main-tag">
+                    <h1 class="archivo-heading" style="color: white;">WELCOME TO <br><span class="outfit-SemiBold600" style="color: darkred;">BOOK STORE</span></h1>
+                    <p class="be-vietnam-pro-extrabold" style="color: white; font-size: 20px;">Click on the button below to get recommended. Happy Reading</p>
+                    <a href="/recommend" class="main-btn be-vietnam-pro-regular">Get Recommendations</a>
+                </div>
+                <div class="main-img">
+                    <img src="{{ url_for('static', filename='images/table.png') }}" alt="">
                 </div>
             </div>
-            {% endfor %}
-        </div>
-    </div>
+        </section>
 
-     <!-- ABOUT -->
-     <div class="about">
-        <div class="about-image">
-            <img src="{{ url_for('static', filename='images/about.png') }}" alt="">
+
+        <!-- FEATURED BOOKS -->
+        <div class="featured-book">
+            <h1 class="outfit-SemiBold600" style="color: darkred;">TOP 50 FEATURED BOOKS</h1>
+            <div class="featured-book-box">
+                {% for i in range(book_name|length) %}
+                <div class="featured-book-card">
+                    <div class="featured-book-img">
+                        <img src="{{ image[i] }}" alt="">
+                    </div>
+                    <div class="featured-book-tag">
+                        <h2 class="writer">{{ book_name[i] }}</h2>
+                        <h2 class="writer">{{ author[i] }}</h2>
+                        <p class="categories be-vietnam-pro-regular">Votes - {{ votes[i] }}</p>
+                        <p class="book-price" style="color: white;">{{ rating[i] }}</p>
+                        <a href="#" class="be-vietnam-pro-regular" style="color: white;">Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-        <div class="about-tag">
-            <h1 class="outfit-SemiBold600" style="color: darkred;">About Us</h1>
-            <p class="ibm-plex-serif-medium" style="color: white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eos pariatur laudantium maiores. Eos quaerat eius labore nulla at? Repudiandae aperiam temporibus ipsam optio dolores vero consectetur delectus expedita tempore!</p>
-            <a href="#" class="about-btn">Learn More</a>
+
+        <!-- SERVICES -->
+        <div class="services">
+            <div class="services-box">
+                <div class="services-card">
+                    <i class='bx bxs-card' style="color: whitesmoke;"></i>
+                    <h3 class="be-vietnam-pro-bold" style="color: darkred;">Fast Delivery</h3>
+                    <p class="ibm-plex-serif-medium" style="color: white;"> Get your books deliverd within 24 hours of your order placement.</p>
+                </div>
+
+                <div class="services-card">
+                    <i class='bx bx-headphone' style="color: whitesmoke;"></i>
+                    <h3 class="be-vietnam-pro-bold" style="color: darkred;">24 x 7 Delivery</h3>
+                    <p class="ibm-plex-serif-medium" style="color: white;">Orders available 24 x 7. Hurry Book yours NOW!!</p>
+                </div>
+
+                <div class="services-card">
+                    <i class='bx bxs-purchase-tag-alt' style="color: whitesmoke;"></i>
+                    <h3 class="be-vietnam-pro-bold" style="color: darkred;">Purchase</h3>
+                    <p class="ibm-plex-serif-medium"style="color: white">Get heavy discounts on buying our PREMIUM Membership!!!</p>
+                </div>
+
+                <div class="services-card">
+                    <i class='bx bxs-lock' style="color: whitesmoke;"></i>
+                    <h3 class="be-vietnam-pro-bold" style="color: darkred;">Lock</h3>
+                    <p class="ibm-plex-serif-medium" style="color: white;"> Your privacy is our priority. End-to-End book delivery.</p>
+                </div>
+            </div>
         </div>
-    </div>
+
     
-</body>
-</html>
+
+    
+
+        <!-- ABOUT -->
+        <!-- <div class="about">
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/about.png') }}" alt="">
+            </div>
+            <div class="about-tag">
+                <h1 class="outfit-SemiBold600" style="color: darkred;">About Us</h1>
+                <p class="ibm-plex-serif-medium" style="color: white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eos pariatur laudantium maiores. Eos quaerat eius labore nulla at? Repudiandae aperiam temporibus ipsam optio dolores vero consectetur delectus expedita tempore!</p>
+                <a href="#" class="about-btn">Learn More</a>
+            </div>
+        </div> -->
+        
+    </body>
+    </html>
